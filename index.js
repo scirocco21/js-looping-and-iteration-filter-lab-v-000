@@ -5,7 +5,7 @@ function findMatching(drivers, string) {
 
 function fuzzyMatch(drivers, string) {
   const substringLength = string.length;
-  return drivers.filter(function (driver) {return driver.substring(0, substringLength) === string})
+  return drivers.filter(function (driver) {return driver.substring(0, substringLength).toLowerCase() === string.toLowerCase()})
 }
 
 function matchName(drivers, string) {
